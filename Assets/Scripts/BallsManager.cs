@@ -38,6 +38,7 @@ public class BallsManager : MonoBehaviour
         {
             RenderBall();
         }
+
         currentExistBalls = maxBalls;
 
     }
@@ -60,7 +61,7 @@ public class BallsManager : MonoBehaviour
     void Update()
     {
         ScreenResolution.text = string.Format("Camera width:{0} - Camera height:{1}\nWidth:{2} - Height:{3}",
-            Camera.main.orthographicSize * Camera.main.aspect, Camera.main.orthographicSize, Screen.width, Screen.height);
+            cameraMaxWidth, cameraMaxHeight, Screen.width, Screen.height);
         if (currentExistBalls < maxBalls)
         {
             RenderBall();
